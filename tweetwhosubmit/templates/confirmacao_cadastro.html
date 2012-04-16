@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Listagem de usuarios cadastrados</title>
+	</head>
+	<body>
+		<center>
+			Cadastro realizado com sucesso!
+			{% if twitter_posted %}
+				<br/> A mensagem: '{{ twitter_msg }}' 
+				<br/> foi postada no endereco: <a target="_blank" href="{{ twitter_url_profile }}">{{ twitter_url_profile }}</a>.
+			{% endif %}
+			<br/><input type="button" value="OK" onclick="window.location = '{% url listagem %}' ; " />
+		</center>
+	</body>
+</html>
+

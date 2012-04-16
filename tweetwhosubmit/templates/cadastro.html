@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Listagem de usuarios cadastrados</title>
+	</head>
+	<body>
+		<center>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<table>
+				<tr>
+					<td><label> {{ form.nome.label }} :</label></td>
+					<td> {{ form.nome }} </td>
+					<td style="color: red">
+		                {% for error in form.nome.errors %}
+		                    {{ error }}
+		                {% endfor %}
+					</td>
+					<td>*</td>
+				</tr>
+				<tr>
+					<td><label> {{ form.email.label }} :</label></td>
+					<td> {{ form.email }} </td>
+					<td style="color: red">
+		                {% for error in form.email.errors %}
+		                    {{ error }}
+		                {% endfor %}
+					</td>
+					<td>*</td>					
+				</tr>				
+				<tr>
+					<td><label> {{ form.telefone.label }} :</label></td>
+					<td> {{ form.telefone }} </td>
+					<td style="color: red">
+		                {% for error in form.telefone.errors %}
+		                    {{ error }}
+		                {% endfor %}
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><label> {{ form.conta_twitter.label }} :</label></td>
+					<td> {{ form.conta_twitter }} </td>
+					<td style="color: red">
+		                {% for error in form.conta_twitter.errors %}
+		                    {{ error }}
+		                {% endfor %}
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			<br/>	
+			<input type="submit" value="Salvar" />
+		</form>	
+		</center>
+	</body>
+</html>
+

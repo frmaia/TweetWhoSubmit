@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>TweetWhoSubmit</title>
+		<style>
+			table { border-collapse: collapse; }
+			th { background-color: #C2D483; color: #FFFFFF; font-size: 1.4em; padding-bottom: 4px; padding-top: 5px; text-align: center; };
+			td { background-color: #EAF2D3; color: #000000; }
+			table, td, th { border:1px solid black; }
+		</style>
+	</head>
+	<body>
+		<center>
+		<h3>TweetWhoSubmit</h3>
+		<br/>
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 200px">Nome</th>
+					<th style="width: 300px">Email</th>
+					<th style="width: 120px">Telefone</th>
+					<th style="width: 120px">ContaTwitter</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for cad in cadastrados %}
+					<tr>
+						<td> {{ cad.nome }} </td>
+						<td> {{ cad.email }} </td>
+						<td> {{ cad.telefone }} </td>
+						<td> {{ cad.conta_twitter }} </td>						
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		
+		<br/><br/>
+		<a href="{% url adicionar_cadastro %}">Adicionar novo...</a>
+		</center>
+	</body>
+	
+</html>
