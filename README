@@ -1,0 +1,19 @@
+###
+## TweetWhoSubmit App
+#
+
+Disponível em:
+    http://ec2-50-17-177-179.compute-1.amazonaws.com:8000/
+
+Descrição:
+    Realiza posts em contas do twitter (configurado no arquivo 'settings.py') com mensagens relacionadas aos cadastros realizados no site.
+
+Dados técnicos:
+    * Desenvolvido em Python sob o framework Django. Utiliza a biblioteca python-twitter para realizar os posts no twitter.
+    * Código fonte disponível em:  https://github.com/frmaia/TweetWhoSubmit
+
+
+--
+Felipe Rodrigues Maia
+frmaia.br@gmail.com
+felipe_rmaia@yahoo.com.br
